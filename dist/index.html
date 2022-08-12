@@ -4,10 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
     <title>City Weather</title>
 </head>
 <body>
-    <div id="root"></div>
+    <div class="top-left">
+        <h2 class="current-weather-description"></h2>
+        <p>
+            <span class="current-temperature"></span>
+            <img class="degree-symbol" src="" alt="">
+            <span class="temperature-unit"></span>
+        </p>
+        <img src="#" class="current-weather-icon">
+    </div>
+    <div class="top-right">
+        <h2 class="city-name"></h2>
+        <p class="country-name"></p>
+        <h3 class="city-time"></h3>
+        <p class="city-date"></p>
+    </div>
+    <div class="bottom-left">
+        <div>
+            <img class="feels-like-icon" src="" alt="">
+            <p>Feels Like</p>
+            <h4>
+                <span class="feels-like"></span>
+                <img class="degree-symbol" src="" alt="">
+                <span class="feels-like-unit"></span>
+            </h4>
+        </div>
+        <div>
+            <img class="humidity-icon" src="" alt="">
+            <p>Humidity</p>
+            <h4><span class="humidity"></span>%</h4>
+        </div>
+        <div>
+            <img src="" alt="">
+            <p>Pressure</p>
+            <h4><span class="pressure"></span><span class="pressure-unit"></span></h4>
+        </div>
+        <div>
+            <img src="" alt="">
+            <p>Wind Speed</p>
+            <h4>
+                <span class="wind-speed"></span>
+                <span class="wind-speed-unit"></span>
+            </h4>
+        </div>
+        <div>
+            <img src="" alt="">
+            <p>Sunset Time</p>
+            <h4><span class="sunset-time"></span></h4>
+        </div>
+        <div>
+            <img src="" alt="">
+            <p>Sunrise Time</p>
+            <h4><span class="sunrise-time"></span></h4>
+        </div>
+        <div>
+            <img src="" alt="">
+            <p>Cloudiness</p>
+            <h4><span class="cloudiness"></span>%</h4>
+        </div>
+        <div>
+            <img src="" alt="">
+            <p>Visibility</p>
+            <h4><span class="visibility"></span><span class="visibility-unit"></span></h4>
+        </div>
+    </div>
+    <div class="bottom-right">
+        <div class="modal-button-container">
+            <button class="open-modal"><img class="hamburger-icon"src="" alt=""></button>
+        </div>
+        <div class="city-name-input-container">
+            <form class="city-name-form">
+                <input class="city-name-input" type="text">
+                <button class="submit-city-name-button"><img class="search-icon" src="" alt=""></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-container">
+        <div class="modal">
+            <div class="top">
+                <img src="" alt="">
+            </div>
+            <div class="middle">
+                <p class="link"><a class="github" href="https://github.com/Rosendo-Martinez">Github</a></p>
+                <p class="link"><a href="https://github.com/Rosendo-Martinez/weather-app">Repository</a></p>
+                <p class="link"><a href="https://openweathermap.org/current">Weather API</a></p>
+                <p class="link"><a href="https://openweathermap.org/api/geocoding-api#direct">Geographical Coordinates API</a></p>
+            </div>
+            <div class="bottom">
+                <p class="copyright-text">Copycat C 2022 Rose</p>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
