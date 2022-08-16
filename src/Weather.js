@@ -14,7 +14,7 @@ async function getGeoCoordinatesOfCity(city) {
 
 async function getCurrentWeatherOfCity(city) {
     let cityData = await getGeoCoordinatesOfCity(city);
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${cityData.lat}&lon=${cityData.lon}&appid=${API_KEY}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${cityData.lat}&lon=${cityData.lon}&units=metric&appid=${API_KEY}`;
     let response = await fetch(url, CORS);
     if (response.ok) {
         let apiData = await response.json();
