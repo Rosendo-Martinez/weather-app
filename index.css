@@ -1,0 +1,194 @@
+body {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-image: url('./images/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1.5fr; */
+    grid-template-areas: 
+        'top-left top-right',
+        'bottom-left bottom-right';
+    color: white;
+    padding: 25px 50px;
+    text-shadow: 2.5px 2.5px black;
+}
+
+.bottom-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.bottom-right {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.invert-color {
+    filter: invert(100%);
+    width: 40px;
+}
+
+.submit-city-name-button {
+    background-color: unset;
+    border: none;
+}
+
+.bottom-left > div {
+    display: grid;
+    grid-template-areas: 
+        'icon header'
+        'icon content';
+        grid-template-columns: 1fr 2.5fr;
+}
+
+.bottom-left > div > img {
+    grid-area: icon;
+    align-self: center;
+}
+
+.bottom-left > div > p {
+    grid-area: header;
+    margin: 0;
+}
+
+.bottom-left > div > h4 {
+    margin: 0;
+    grid-area: content;
+    font-size: 1.1rem;
+}
+
+.current-weather-description {
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.current-temperature {
+    font-size: 1.7rem;
+}
+
+.current-weather-icon {
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.559);
+    border-radius: 100%;
+}
+
+.city-name {
+    margin-bottom: 0;
+    border-bottom: 2px solid white;
+}
+
+.country-name {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.city-date {
+    font-size: 2rem;
+}
+
+.city-name-input {
+    background-color: unset;
+    border: unset;
+}
+
+.city-name-input::placeholder , .city-name-input{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.city-name-input::placeholder {
+    color: rgba(255, 255, 255, 0.763);
+}
+
+.submit-city-name-button {
+}
+
+.city-name-form {
+    border-bottom: 5px solid white;
+}
+
+.bottom-right {
+    position: relative;
+}
+
+.modal-button-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.open-modal {
+    background-color: unset;
+    border: none;
+}
+
+.hamburger-icon {
+    width: 50px;
+}
+
+.modal-container {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-color: rgb(47, 43, 43);
+    text-shadow: none;
+    padding: 10px 25px 10px 50px;
+    box-sizing: border-box;
+    /* text-align: right; */
+    box-shadow: -5px 0 25px rgb(255, 255, 255);
+}
+
+.display-none {
+    display: none !important;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .top {
+    /* align-self: flex-end; */
+}
+
+.modal .middle {
+
+}
+
+.modal .bottom {
+    margin-top: auto;
+    align-self: center;
+}
+
+.close-modal {
+    background-color: unset;
+    border: none;
+}
+
+p.link > a {
+    color: white;
+}
+
+p.link {
+    margin-bottom: 35px;
+}
+
+
+p.copyright-text {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
