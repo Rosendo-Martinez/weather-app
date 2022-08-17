@@ -3,11 +3,6 @@ import hdate from 'human-date';
 
 const UI = (function() {
 
-    // default city weather
-    getCurrentWeatherOfCity('london').then(weather => {
-        renderWeatherDataToDOM(weather);
-    });
-
     document.querySelector('.open-modal').addEventListener('click', () => {
         document.querySelector('.modal-container').classList.toggle('display-none');
     })
@@ -21,9 +16,8 @@ const UI = (function() {
     function handleFormSubmit(e) {
         e.preventDefault();
         getCurrentWeatherOfCity(document.querySelector('.city-name-input').value)
-            .then(weather => {
-                renderWeatherDataToDOM(weather);
-            });
+            .then(weather => renderWeatherDataToDOM(weather))
+            .catch(error => alert(error.message));
     }
 
     function renderWeatherDataToDOM(weather) {
@@ -65,7 +59,7 @@ const UI = (function() {
         return new Date(cityTime);
     }
 
-
+    return {renderWeatherDataToDOM}
 })();
 
-export {UI};
+export { UI };
